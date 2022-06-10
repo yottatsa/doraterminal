@@ -1,0 +1,14 @@
+GAL16V8    ;
+input      ;
+
+
+NC	I7	I6	I5	I4	I3	I2	I1	I0	GND
+NC	SIG	NC	D0	D1	D2	SIG1	SIG2	NC	VCC
+
+SIG1 = !D2 * !D1 * !D0 * I0 + !D2 * !D1 *  D0 * I1 + !D2 *  D1 * !D0 * I2 + !D2 *  D1 *  D0 * I3
+SIG2 =  D2 * !D1 * !D0 * I4 +  D2 * !D1 *  D0 * I5 +  D2 *  D1 * !D0 * I6 +  D2 *  D1 *  D0 * I7
+SIG  =  SIG1 + SIG2
+
+
+DESCRIPTION
+

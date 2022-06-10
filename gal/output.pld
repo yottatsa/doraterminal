@@ -1,0 +1,27 @@
+GAL16V8    ;
+output     ;
+
+
+NC	SIG	EN	D0	D1	D2	NC	NC	NC	GND
+NC	O7	O6	O5	O4	O3	O2	O1	O0	VCC
+
+O0.T = SIG
+O1.T = SIG
+O2.T = SIG
+O3.T = SIG
+O4.T = SIG
+O5.T = SIG
+O6.T = SIG
+O7.T = SIG
+
+O0.E = EN * !D2 * !D1 * !D0
+O1.E = EN * !D2 * !D1 *  D0
+O2.E = EN * !D2 *  D1 * !D0
+O3.E = EN * !D2 *  D1 *  D0
+O4.E = EN *  D2 * !D1 * !D0
+O5.E = EN *  D2 * !D1 *  D0
+O6.E = EN *  D2 *  D1 * !D0
+O7.E = EN *  D2 *  D1 *  D0
+
+
+DESCRIPTION
